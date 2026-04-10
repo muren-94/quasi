@@ -10,3 +10,9 @@
    ```
    pip3 install -e .
    ```
+
+### Roadmap
+- [ ] Add KPSS and ADF options
+- [ ] Add multi-signal example
+- [ ] Add plotting examples to README.md
+- [ ] more stuff!
