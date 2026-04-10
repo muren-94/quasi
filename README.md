@@ -2,10 +2,11 @@
 > A collection of methods for identifying steady state behaviour in hypersonic shock tunnel data
 
 ### Installation
+1. Clone the repo
    ```sh
    git clone https://github.com/muren-94/steady_state_toolkit.git
    ```
-   Run the following in the repo directory
+2. Run the following in the repo directory to install the package
    ```
    pip3 install -e .
    ```
