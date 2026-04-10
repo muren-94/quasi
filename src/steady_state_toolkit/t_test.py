@@ -75,7 +75,7 @@ def calc_critical_t_value(alpha,
 
 
 
-def t_test(data_array,
+def sst_assess_data(data_array,
            time_array,
            alpha=0.025,
            value_to_return='steady_result'):

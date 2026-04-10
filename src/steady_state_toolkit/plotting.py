@@ -1,13 +1,14 @@
 from matplotlib.collections import LineCollection
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
-#from .t_test import *
-#from .sliding_window import *
+from .t_test import *
+from .sliding_window import *
 import os
+import numpy as np
 
 def colorline(x, y, z, contour_start_value=-10, contour_end_value=1, linewidth=5, alpha=1.0, cmap='coolwarm_r', linestyle='-', axis=None):
 
-    z = np.asarray(z)
+    z = np.asarray(z) * 100
 
     points = np.array([x, y]).T.reshape(-1, 1, 2)
     segments = np.concatenate([points[:-1], points[1:]], axis=1)
