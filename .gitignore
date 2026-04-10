@@ -1,2 +1,4 @@
 venv/
 *Zone.Identifier
+**__pycache__*
+**egg-info*
