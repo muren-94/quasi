@@ -1,1 +1,1 @@
-from . import square_wave_generator
+from . import pitot_pressure_curve_generator
