@@ -1,6 +1,8 @@
 import numpy as np
 from . import t_test
 
+
+
 def sliding_window_t_test(time_data,
                           test_data,
                           alpha=0.025,
@@ -42,7 +44,7 @@ def sliding_window_t_test(time_data,
 
         window_data = test_data[i:i + window_size]
         time_data = time[i:i + window_size] - min(time[i:i + window_size])
-        steady_matrix[i, i:i+window_size] = t_test.sst_assess_data(data_array=window_data,
+        steady_matrix[i, i:i+window_size] = t_test.perform_t_test(data_array=window_data,
                                                    time_array=time_data,
                                                    alpha=alpha,
                                                    value_to_return=value_to_return)
