@@ -1,5 +1,5 @@
 import numpy as np
-from steady_state_toolkit import statmethods, plotmethods
+from steady_state_toolkit import stats, plotting
 
 
 
@@ -45,17 +45,17 @@ def sliding_window_test(time_data,
         time_data = time[i:i + window_size] - min(time[i:i + window_size])
 
         if test_type == 't_test':
-            steady_matrix[i, i:i+window_size] = statmethods.t_test(data_array=window_data,
+            steady_matrix[i, i:i+window_size] = stats.t_test(data_array=window_data,
                                                    time_array=time_data,
                                                    alpha=alpha/100,
                                                    value_to_return=value_to_return)
         
         elif test_type == 'adf':
-            steady_matrix[i, i:i+window_size] = statmethods.adf_test(timeseries=window_data,
+            steady_matrix[i, i:i+window_size] = stats.adf_test(timeseries=window_data,
                                                                      significance_level=alpha)
             
         elif test_type == 'kpss':
-            steady_matrix[i, i:i+window_size] = statmethods.kpss_test(timeseries=window_data,
+            steady_matrix[i, i:i+window_size] = stats.kpss_test(timeseries=window_data,
                                                                      significance_level=alpha)
 
         # for example, for the array with elements 1 - 9, where the window size is 7, there are three windows
