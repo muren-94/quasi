@@ -21,3 +21,6 @@ Remaking SST project following python project conventions and implementing best 
 - [ ] Add plotting examples to README.md
 - [ ] Simple unit testing cases
 - [ ] more stuff!
+
+### Example Output
+![](square_wave_output.png)
