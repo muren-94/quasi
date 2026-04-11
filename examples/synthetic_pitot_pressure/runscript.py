@@ -1,7 +1,7 @@
-import steady_state_toolkit as sst
+import quasi
 import numpy as np
 import matplotlib.pyplot as plt
-from steady_state_toolkit.plotting import colorline
+from quasi.plotting import colorline
 from pitot_pressure_curve_generator import pitot_pressure_curve_generator
 
 required_test_time_length = 100
@@ -20,7 +20,7 @@ for ax, test_type in zip(axes, ['t_test', 'kpss', 'adf']):
 
     ax.set_title(test_type)
 
-    t_test_matrix = sst.core.sliding_window_test(
+    t_test_matrix = quasi.core.sliding_window_test(
         time_data=time_array,
         test_data=pitot_pressure,
         window_size=window_size,

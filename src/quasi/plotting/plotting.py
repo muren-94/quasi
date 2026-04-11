@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from steady_state_toolkit.core.sliding_window import *
+from quasi.core.sliding_window import *
 import os
 import numpy as np
 

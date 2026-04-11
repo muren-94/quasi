@@ -1,5 +1,5 @@
 import numpy as np
-from steady_state_toolkit import stats, plotting
+from quasi import stats, plotting
 
 
 

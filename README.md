@@ -1,10 +1,10 @@
-# Steady State Analysis Project
-> A collection of methods for identifying steady state behaviour in hypersonic shock tunnel data
+# <span style="color:blue">Quasi</span>.
+> Stationarity testing methods for identifying steady state behaviour in hypersonic shock tunnel data
 
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/muren-94/steady_state_toolkit.git
+   git clone https://github.com/muren-94/HyperSteady.git
    ```
 2. Run the following in the repo directory to install the package
    ```
@@ -12,7 +12,7 @@
    ```
 ### Version
 0.1.0 Beta <br />
-Remaking SST project following python project conventions and implementing best practice and DK previous pull request suggestions
+Remaking steady state project following python project conventions and implementing best practice and DK previous pull request suggestions
 
 ### Roadmap
 - [X] Add KPSS and ADF options

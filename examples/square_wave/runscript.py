@@ -1,6 +1,6 @@
 from square_wave_generator import square_wave_generator
-import steady_state_toolkit as sst
-from steady_state_toolkit.plotting import colorline
+import quasi
+from quasi.plotting import colorline
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 time_array, square_wave = square_wave_generator(plot=True)
 
-t_test_matrix = sst.core.sliding_window_test(
+t_test_matrix = quasi.core.sliding_window_test(
     time_data=time_array,
     test_data=square_wave,
     window_size=1,
