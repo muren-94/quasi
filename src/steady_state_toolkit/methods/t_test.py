@@ -1,6 +1,7 @@
 from scipy.stats import t as tdist
+import statsmodels.api as sm
 import numpy as np
-
+import pandas as pd
 
 
 def t_test_window_time(time_array):
@@ -75,7 +76,7 @@ def calc_critical_t_value(alpha,
 
 
 
-def sst_assess_data(data_array,
+def t_test(data_array,
            time_array,
            alpha=0.025,
            value_to_return='steady_result'):
@@ -109,3 +110,14 @@ def sst_assess_data(data_array,
         raise ValueError(f"Invalid sim type. Expected one of: {values_to_return.keys()}")
 
     return values_to_return[value_to_return]
+
+
+
+if (__name__ == '__main__'):
+    sunspots = sm.datasets.sunspots.load_pandas().data
+
+    sunspots.index = pd.Index(sm.tsa.datetools.dates_from_range("1700", "2008"))
+
+    result = t_test(sunspots["SUNACTIVITY"], sunspots['YEAR'])
+
+    print(f't-test results: {result}')

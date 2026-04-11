@@ -1,5 +1,5 @@
 import numpy as np
-from . import t_test
+from .stationarity_methods import t_test
 
 def sliding_window_t_test(time_data,
                           test_data,

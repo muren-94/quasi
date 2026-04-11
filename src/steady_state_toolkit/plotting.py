@@ -1,7 +1,7 @@
 from matplotlib.collections import LineCollection
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
-from .t_test import *
+from .stationarity_methods.t_test import *
 from .sliding_window import *
 import os
 import numpy as np
