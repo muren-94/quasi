@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
-from quasi.core.sliding_window import *
+from quasi.core.sliding_window import sliding_window_test, steady_state_start_end_region
+from quasi.plotting.colorline import colorline
 import os
 import numpy as np
 
@@ -48,7 +49,7 @@ def assess_steady_state(dataset_name,
 
             ax = plt.subplot(nrows, ncols, count + 1)
 
-            ttest[:, count] = sliding_window_t_test(time_data, test_data[:, count], alpha, window_size, time_increment,
+            ttest[:, count] = sliding_window_test(time_data, test_data[:, count], alpha, window_size, time_increment,
                                                     print_diagnostics=print_diagnostics, value_to_return=value_to_return)
             lc = colorline(time_data, test_data[:, count], ttest[:, count])
             plt.ylabel(y_label), plt.xlabel(x_label), plt.colorbar(lc, label='Steady State (%)')
@@ -82,7 +83,7 @@ def assess_steady_state(dataset_name,
             print('-' * 60)
             print('Analysing signal number {0}'.format(count + 1))
 
-            ttest[:, count] = sliding_window_t_test(time_data, test_data[:, count], alpha, window_size, time_increment,
+            ttest[:, count] = sliding_window_test(time_data, test_data[:, count], alpha, window_size, time_increment,
                                                     print_diagnostics=print_diagnostics, value_to_return=value_to_return)
             lc = colorline(time_data, test_data[:, count], ttest[:, count])
 
@@ -110,7 +111,7 @@ def assess_steady_state(dataset_name,
             ax.set_ylabel(y_label), ax.set_xlabel(x_label)
             ax.set_xlim(time_data.min(), time_data.max()), ax.set_ylim(test_data[:].min(), test_data[:].max())
 
-            ttest[:, count] = sliding_window_t_test(time_data, test_data[:, count], alpha, window_size, time_increment,
+            ttest[:, count] = sliding_window_test(time_data, test_data[:, count], alpha, window_size, time_increment,
                                                     print_diagnostics=print_diagnostics, value_to_return=value_to_return)
             lc = colorline(time_data, test_data[:, count], ttest[:, count], axis=ax)
 
@@ -169,7 +170,7 @@ def assess_steady_state_top_down(dataset_name,
         print('-' * 60)
         print('Analysing signal number {0}'.format(count + 1))
 
-        ttest[:, count] = sliding_window_t_test(time_data, test_data[:, count], alpha, window_size, time_increment,
+        ttest[:, count] = sliding_window_test(time_data, test_data[:, count], alpha, window_size, time_increment,
                                                 print_diagnostics=print_diagnostics)
 
     # creates empty arrays for start and end points for each pitot probe
