@@ -23,4 +23,5 @@ Remaking SST project following python project conventions and implementing best 
 - [ ] more stuff!
 
 ### Example Output
-![](square_wave_output.svg){: width="50%"}
+![](square_wave_output.svg)
+<img src="![image-url](https://github.com/muren-94/steady_state_toolkit/raw/main/square_wave_output.svg)" alt="Alt Text" width="300" height="200">
