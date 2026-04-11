@@ -4,7 +4,7 @@
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/muren-94/HyperSteady.git
+   git clone https://github.com/muren-94/quasi.git
    ```
 2. Run the following in the repo directory to install the package
    ```
