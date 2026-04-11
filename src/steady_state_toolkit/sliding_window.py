@@ -1,13 +1,15 @@
 import numpy as np
 from .stationarity_methods import t_test
 
+
+
 def sliding_window_t_test(time_data,
                           test_data,
                           alpha=0.025,
                           window_size=50e-6,
                           sampling_rate=4e-7,
                           print_diagnostics=False,
-                          save_t_test_matrix=True,
+                          save_t_test_matrix=False,
                           value_to_return='steady_result'):
 
     # Performs the sliding window t-test assessment on a time data series and finds the average
@@ -37,12 +39,10 @@ def sliding_window_t_test(time_data,
     if print_diagnostics:
         print('Performing sliding window t-test through data set')
     for i in range(len(test_data) - window_size + 1):
-        # print(len(test_data), 'test data')
-        # print(len(time), 'time')
 
         window_data = test_data[i:i + window_size]
         time_data = time[i:i + window_size] - min(time[i:i + window_size])
-        steady_matrix[i, i:i+window_size] = t_test.sst_assess_data(data_array=window_data,
+        steady_matrix[i, i:i+window_size] = t_test.perform_t_test(data_array=window_data,
                                                    time_array=time_data,
                                                    alpha=alpha,
                                                    value_to_return=value_to_return)
