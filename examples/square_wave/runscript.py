@@ -13,7 +13,7 @@ t_test_matrix = sst.sliding_window.sliding_window_test(
     alpha=0.1,
     sampling_rate=np.max(time_array)/len(time_array))
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(6,4))
 ax.set_title('Square Wave Steady Result')
 lc = colorline(time_array, square_wave, t_test_matrix)
 ax.set_xlim(xmin=np.min(time_array), xmax=np.max(time_array))
@@ -24,5 +24,6 @@ plt.tight_layout()
 save = True
 if save:
     plt.savefig('square_wave_output.png')
+    plt.savefig('square_wave_output.svg')
 
 plt.show()

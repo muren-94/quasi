@@ -23,4 +23,4 @@ Remaking SST project following python project conventions and implementing best 
 - [ ] more stuff!
 
 ### Example Output
-![](square_wave_output.png)
+![](square_wave_output.svg)
