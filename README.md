@@ -1,4 +1,4 @@
-# Steady State Toolkit (SST)
+# Steady State Analysis Project
 > A collection of methods for identifying steady state behaviour in hypersonic shock tunnel data
 
 ### Installation
