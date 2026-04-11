@@ -3,15 +3,12 @@ from statsmodels.tsa.stattools import kpss
 import pandas as pd
 
 def kpss_test(timeseries, significance_level):
-    # allowable_significance_levels = [1, 5, 10]
-    # if significance_level not in allowable_significance_levels:
-    #     raise ValueError('significance_level must be in [1, 5, 10] %')
-
+    
     allowable_significance_levels = [1, 5, 10]
 
     if significance_level not in allowable_significance_levels:
-        raise ValueError(f"Critical must be one of: {allowable_significance_levels}")
-
+        raise ValueError(f"Significance level (%) must be one of: {allowable_significance_levels}")
+    
     dftest = kpss(timeseries, regression="c", nlags="auto")
     index_of_critical_values = 3
 
