@@ -10,10 +10,14 @@
    ```
    pip3 install -e .
    ```
+### Version
+0.1.0 Closed Beta <br />
+Remaking SST project following python project conventions and implementing best practice and DK previous pull request suggestions
 
 ### Roadmap
 - [ ] Add KPSS and ADF options
 - [ ] Make plotting methods folder and expand
 - [ ] Add multi-signal example
 - [ ] Add plotting examples to README.md
+- [ ] Simple unit testing cases
 - [ ] more stuff!
