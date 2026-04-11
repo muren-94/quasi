@@ -1,7 +1,7 @@
 from matplotlib.collections import LineCollection
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
-from .sliding_window import *
+from steady_state_toolkit.sliding_window import *
 import os
 import numpy as np
 

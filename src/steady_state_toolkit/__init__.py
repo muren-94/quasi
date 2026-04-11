@@ -1,3 +1,1 @@
-from .methods import t_test
-
-from . import sliding_window, plotting
+from .sliding_window import *

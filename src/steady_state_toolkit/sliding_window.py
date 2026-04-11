@@ -1,5 +1,5 @@
 import numpy as np
-from steady_state_toolkit.methods import t_test, kpss, adf
+from steady_state_toolkit.statmethods import t_test, kpss, adf
 
 
 
