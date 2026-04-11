@@ -16,7 +16,7 @@ def adf_test(timeseries, significance_level):
     index_of_critical_values = 4
 
     t_value = dftest[0]
-    crit_value = dftest[index_of_critical_values][f"{crit_value}%"]
+    crit_value = dftest[index_of_critical_values][f"{significance_level}%"]
 
     if t_value < crit_value:
         return 1

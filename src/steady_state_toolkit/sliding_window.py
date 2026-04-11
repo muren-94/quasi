@@ -10,7 +10,8 @@ def sliding_window_test(time_data,
                           sampling_rate=4e-7,
                           print_diagnostics=False,
                           save_t_test_matrix=False,
-                          value_to_return='steady_result'):
+                          value_to_return='steady_result',
+                          test_type='t_test'):
 
     # Performs the sliding window t-test assessment on a time data series and finds the average
     # steadiness of each sample in the series dependent on user defined window size and significance level
@@ -42,10 +43,20 @@ def sliding_window_test(time_data,
 
         window_data = test_data[i:i + window_size]
         time_data = time[i:i + window_size] - min(time[i:i + window_size])
-        steady_matrix[i, i:i+window_size] = statmethods.t_test(data_array=window_data,
+
+        if test_type == 't_test':
+            steady_matrix[i, i:i+window_size] = statmethods.t_test(data_array=window_data,
                                                    time_array=time_data,
-                                                   alpha=alpha,
+                                                   alpha=alpha/100,
                                                    value_to_return=value_to_return)
+        
+        elif test_type == 'adf':
+            steady_matrix[i, i:i+window_size] = statmethods.adf_test(timeseries=window_data,
+                                                                     significance_level=alpha)
+            
+        elif test_type == 'kpss':
+            steady_matrix[i, i:i+window_size] = statmethods.kpss_test(timeseries=window_data,
+                                                                     significance_level=alpha)
 
         # for example, for the array with elements 1 - 9, where the window size is 7, there are three windows
         # evaluated as the window size of 7

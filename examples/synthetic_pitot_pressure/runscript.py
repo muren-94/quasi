@@ -15,7 +15,9 @@ t_test_matrix = sst.sliding_window.sliding_window_test(
     time_data=time_array,
     test_data=pitot_pressure,
     window_size=window_size,
-    sampling_rate=np.max(time_array)/len(time_array))
+    alpha=5,
+    sampling_rate=np.max(time_array)/len(time_array),
+    test_type='t_test')
 
 fig, ax = plt.subplots()
 ax.set_title('Synthetic Pitot Pressure Steady Result')
