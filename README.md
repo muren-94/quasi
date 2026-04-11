@@ -15,7 +15,7 @@
 Remaking SST project following python project conventions and implementing best practice and DK previous pull request suggestions
 
 ### Roadmap
-- [ ] Add KPSS and ADF options
+- [X] Add KPSS and ADF options
 - [X] Make plotting methods folder and expand
 - [ ] Add multi-signal example
 - [X] Add plotting examples to README.md
