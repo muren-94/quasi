@@ -32,8 +32,8 @@ def pitot_pressure_curve_generator(required_test_time_length=50, required_test_t
     rising_sin_curve = sine_wave_y[-1] + np.sin(straight_line_x-np.min(straight_line_x)+np.pi) /10 + (straight_line_x - np.min(straight_line_x)) / 50
 
     required_multiplier = required_test_time_signal_value / np.mean(sine_wave_y)
-    total_x = np.concat((x_range[:transition_point], sine_wave_x, straight_line_x))
-    total_y = np.concat((normal_dist[:transition_point], sine_wave_y, rising_sin_curve)) * required_multiplier
+    total_x = np.concatenate((x_range[:transition_point], sine_wave_x, straight_line_x))
+    total_y = np.concatenate((normal_dist[:transition_point], sine_wave_y, rising_sin_curve)) * required_multiplier
 
     total_x = np.linspace(total_x[0], total_x[-1], len(total_y))
     noise = np.random.normal(0, noise_value, len(total_y))

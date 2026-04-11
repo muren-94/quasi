@@ -76,11 +76,7 @@ def calc_critical_t_value(alpha,
 
 
 
-<<<<<<< HEAD:src/steady_state_toolkit/methods/t_test.py
 def t_test(data_array,
-=======
-def perform_t_test(data_array,
->>>>>>> 1869b61370d92fd71a4ddaa73b6898eea61b258b:src/steady_state_toolkit/t_test.py
            time_array,
            alpha=0.025,
            value_to_return='steady_result'):

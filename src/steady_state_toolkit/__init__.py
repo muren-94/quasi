@@ -1,3 +1,3 @@
-from .stationarity_methods import t_test
+from .methods import t_test
 
 from . import sliding_window, plotting
