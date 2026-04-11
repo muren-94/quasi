@@ -11,7 +11,7 @@
    pip3 install -e .
    ```
 ### Version
-0.1.0 Closed Beta \\
+0.1.0 Closed Beta__
 Remaking SST project following python project conventions and implementing best practice and DK previous pull request suggestions
 
 ### Roadmap
