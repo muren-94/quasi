@@ -13,6 +13,7 @@
 
 ### Roadmap
 - [ ] Add KPSS and ADF options
+- [ ] Make plotting methods folder and expand
 - [ ] Add multi-signal example
 - [ ] Add plotting examples to README.md
 - [ ] more stuff!
