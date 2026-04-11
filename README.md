@@ -17,7 +17,7 @@ Remaking steady state project following python project conventions and implement
 ### Roadmap
 - [X] Add KPSS and ADF options
 - [X] Make plotting methods folder and expand
-- [ ] Add multi-signal example
+- [X] Add multi-signal example
 - [X] Add plotting examples to README.md
 - [ ] Simple unit testing cases
 - [ ] more stuff!

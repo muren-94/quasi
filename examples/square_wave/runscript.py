@@ -1,6 +1,5 @@
 from square_wave_generator import square_wave_generator
 import quasi
-from quasi.plotting import colorline
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -18,7 +17,7 @@ t_test_matrix = quasi.core.sliding_window_test(
 
 fig, ax = plt.subplots(figsize=(6,4))
 ax.set_title('Square Wave Steady Result')
-lc = colorline(time_array, square_wave, t_test_matrix)
+lc = quasi.plotting.colorline(time_array, square_wave, t_test_matrix)
 ax.set_xlim(xmin=np.min(time_array), xmax=np.max(time_array))
 ax.set_ylim(ymin=-1.25, ymax=1.1*np.max(square_wave))
 plt.colorbar(lc, label='Steady State (%)')

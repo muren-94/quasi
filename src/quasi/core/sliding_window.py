@@ -26,6 +26,8 @@ def sliding_window_test(time_data,
 
     if print_diagnostics:
         print("Window size after rounding: ", window_size)
+        print('len(test_data): ', len(test_data))
+        print('np.size(test_data): ', np.size(test_data))
 
     if window_size < 3:
         if print_diagnostics:
