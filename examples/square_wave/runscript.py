@@ -12,7 +12,7 @@ t_test_matrix = sst.sliding_window.sliding_window_test(
     time_data=time_array,
     test_data=square_wave,
     window_size=1,
-    alpha=1,
+    alpha=2.5,
     sampling_rate=np.max(time_array)/len(time_array),
     test_type='t_test')
 
