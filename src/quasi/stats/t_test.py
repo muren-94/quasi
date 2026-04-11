@@ -3,6 +3,12 @@ import statsmodels.api as sm
 import numpy as np
 import pandas as pd
 
+''' This follows the methodology set out by Dalheim and Steen (2020)
+Dalheim, , Steen, S.: A computationally efficient method for identification of
+steady state in time series data from ship monitoring. Journal of Ocean En
+gineering and Science 5(4), 333–345 (2020) https://doi.org/10.1016/j.joes.
+2020.01.003'''
+
 
 def t_test_window_time(time_array):
 
