@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import scipy.signal
 
 # Raw data import #
-data = np.loadtxt('x2s5577_pressure_data.csv', delimiter=',', skiprows=1)
+data = np.loadtxt('pressure_data.csv', delimiter=',', skiprows=1)
 time = data[:,0]
 pressures = data[:,1:]
 
