@@ -1,4 +1,4 @@
-# <span style="color:blue">Quasi</span>.
+# <span style="color:blue">Quasi</span>-
 > Stationarity testing methods for identifying steady state behaviour in hypersonic shock tunnel data
 
 ### Installation
