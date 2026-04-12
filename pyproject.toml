@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Quasi"
-version = "0.0.1"
+version = "0.1.0"
 authors = [
   { name="Matt Uren", email="m.uren94@proton.me" },
 ]
@@ -31,4 +31,4 @@ license-files = ["LICEN[CS]E*"]
 
 [project.urls]
 Homepage = "https://github.com/muren-94/quasi"
-Issues = https://github.com/muren-94/quasi/issues"
+Issues = "https://github.com/muren-94/quasi/issues"
