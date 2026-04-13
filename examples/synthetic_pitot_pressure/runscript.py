@@ -6,7 +6,7 @@ from pitot_pressure_curve_generator import pitot_pressure_curve_generator
 
 required_test_time_length = 100
 required_test_time_signal_value = 50
-window_size = 25
+window_size = 10
 time_array, pitot_pressure = pitot_pressure_curve_generator(required_test_time_length=required_test_time_length, 
                                                             required_test_time_signal_value=required_test_time_signal_value, 
                                                             plot=False)
@@ -33,7 +33,6 @@ for ax, test_type in zip(axes, ['t_test', 'kpss', 'adf']):
     ax.annotate(text='Sliding Window Length', xy=(10, 2.3*required_test_time_signal_value), xytext=(0, 2.3*required_test_time_signal_value))
     ax.set_xlim(xmin=np.min(time_array), xmax=np.max(time_array))
     ax.set_ylim(ymin=-1.25, ymax=1.1*np.max(pitot_pressure))
-    ax.legend()
     fig.colorbar( lc, ax=ax, label='Steady State (%)')
 
 fig.tight_layout()
