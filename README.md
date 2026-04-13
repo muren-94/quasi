@@ -20,6 +20,7 @@ Remaking steady state project following python project conventions and implement
 - [X] Add multi-signal example
 - [X] Add plotting examples to README.md
 - [ ] Simple unit testing cases
+- [ ] Add a user / theory guide
 - [ ] more stuff!
 
 ### Example Output
