@@ -51,7 +51,7 @@ def calc_sigmaa_hat(b1_hat,
     n = len(data_array)
     # White noise standard deviation
     sigmaa_hat = np.sqrt((1/(n-2)) * sum((x - b1_hat*time_array[index] - b0_hat)**2 for index, x in enumerate(data_array)))
-    print(sigmaa_hat)
+
     return sigmaa_hat
 
 
