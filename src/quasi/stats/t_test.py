@@ -45,12 +45,13 @@ def calc_b0_hat(data_array,
 
 def calc_sigmaa_hat(b1_hat,
                     b0_hat,
-                    data_array):
+                    data_array,
+                    time_array):
 
     n = len(data_array)
     # White noise standard deviation
-    sigmaa_hat = np.sqrt((1/(n-2)) * sum((x - b1_hat - b0_hat)**2 for x in data_array))
-
+    sigmaa_hat = np.sqrt((1/(n-2)) * sum((x - b1_hat*time_array[index] - b0_hat)**2 for index, x in enumerate(data_array)))
+    print(sigmaa_hat)
     return sigmaa_hat
 
 
@@ -90,7 +91,7 @@ def t_test(data_array,
     window_time = t_test_window_time(time_array)
     b1_hat = calc_b1_hat(data_array, window_time)
     b0_hat = calc_b0_hat(data_array, b1_hat, window_time)
-    sigmaa_hat = calc_sigmaa_hat(b1_hat, b0_hat, data_array)
+    sigmaa_hat = calc_sigmaa_hat(b1_hat, b0_hat, data_array, time_array)
     sigmab1_hat = calc_sigmab1_hat(sigmaa_hat, window_time)
     t_value = calc_t_value(b1_hat, sigmab1_hat)
 
